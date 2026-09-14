@@ -1,0 +1,26 @@
+# ===== MATLAB =====
+*.asv
+*.m~
+*.autosave
+*.slxc
+*.slprj/
+slprj/
+codegen/
+*.fig
+
+# ===== 数据与结果（大文件，绝不入库）=====
+data/
+results/
+!data/.gitkeep
+!results/.gitkeep
+
+# ===== 系统 =====
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ===== 编辑器 =====
+.vscode/*
+!.vscode/settings.json
+*.log
+*.tmp
