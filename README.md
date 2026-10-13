@@ -24,6 +24,10 @@ summary = run_experiment();
 本地data目录保存回波；results保存图像和MAT结果；experiments保存可上传的参数、指标和研究记录。
 RD独立读取已有回波的方法见signal_processing/rd/README.md。
 
+## 绘图规范
+成像配色以用户提供的五算法统一参数仿真图片为参考：parula色图、[-40,0]dB成像色标、蓝色剖面曲线。
+完整规范见docs/plotting_conventions.md，公共样式入口为common/plotting/sar_plot_style.m。
+
 ## 数据编号与实验编号
 例如 echo_001_spaceborne_single_45deg、exp_001_bp_baseline。
 参数详情写入配置和记录，名称只用于辨认。新参数重新生成时建立新编号，不覆盖旧数据。
