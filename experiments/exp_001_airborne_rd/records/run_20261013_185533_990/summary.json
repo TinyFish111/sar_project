@@ -1,0 +1,65 @@
+{
+  "dataset_id": "echo_001_airborne_single_broadside_20261013_185533_990",
+  "run_id": "run_20261013_185533_990",
+  "data_path": "D:\\sar_project\\data\\simulated\\echo_001_airborne_single_broadside_20261013_185533_990\\echo.mat",
+  "result_path": "D:\\sar_project\\results\\exp_001_airborne_rd\\run_20261013_185533_990\\rd",
+  "record_path": "D:\\sar_project\\experiments\\exp_001_airborne_rd\\records\\run_20261013_185533_990",
+  "echo_size": [
+    2040,
+    9686
+  ],
+  "generation_elapsed_s": 0.8664236,
+  "rd_elapsed_s": 21.7867432,
+  "metrics": {
+    "peak_range_m": 30000,
+    "peak_azimuth_m": 0,
+    "peak_amplitude": 46629.15234375,
+    "range": {
+      "pslr_db": -13.253761742104784,
+      "islr_db": -9.7900247443564314,
+      "irw_3db_m": 1.3282748932942923,
+      "interpolated_peak_coordinate_m": 30000,
+      "mainlobe_bounds_m": [
+        29998.516651900522,
+        30001.483348099478
+      ],
+      "integration_window_m": [
+        29800.138361333335,
+        30201.071738432031
+      ],
+      "oversampling": 32
+    },
+    "azimuth": {
+      "pslr_db": -13.262140864393551,
+      "islr_db": -9.758845557039205,
+      "irw_3db_m": 0.49864928947656212,
+      "interpolated_peak_coordinate_m": 2.8421709430404007E-14,
+      "mainlobe_bounds_m": [
+        -0.55989583333330017,
+        0.55989583333337123
+      ],
+      "integration_window_m": [
+        -100,
+        100.4036458333334
+      ],
+      "oversampling": 32
+    },
+    "definition": "complex interpft; first-minimum mainlobe; finite-window energy; -3.0103 dB width"
+  },
+  "expected_range_irw_m": 1.327930692711,
+  "expected_azimuth_irw_m": 0.49859725633704632,
+  "derived_wavelength_m": 0.031892814680851062,
+  "derived_ka_hz_per_s": -130.64593728594289,
+  "derived_doppler_bandwidth_hz": 444.19618677220581,
+  "max_range_migration_m": 3.0102656383460271,
+  "provenance": {
+    "git_commit_at_generation": "1754d7e43502c0365504f39de2766313b4767ab9",
+    "git_dirty_at_generation": true,
+    "configuration_path": "echo_generation/configs/airborne_point_baseline.m",
+    "random_seed": 1,
+    "generated_at": "2026-10-13 18:55:34 +0800",
+    "matlab_version": "9.13.0.2049777 (R2022b)",
+    "matlab_release": "2022b"
+  },
+  "checks": "finite echo, dimensions, sampling coverage, ideal sinc metrics, peak position, IRW within 15 percent, PSLR below -12 dB: passed"
+}

@@ -1,0 +1,45 @@
+{
+  "description": "MATLAB sources executed in run_20261013_185533_990; no MATLAB source modifications after execution",
+  "files": [
+    {
+      "path": "common/io/get_project_provenance.m",
+      "sha256": "066f3b54f19a5bcb6c733f5bafcc003782cfffaa07603e92e0e80d9795c3a47b"
+    },
+    {
+      "path": "common/metrics/point_target_metrics.m",
+      "sha256": "036e594770f9ae6b33006f393e9372b53b23d720f5ae07dcf8dc6fa38b2a0122"
+    },
+    {
+      "path": "common/plotting/plot_airborne_rd_experiment.m",
+      "sha256": "a47225054279f60d02b712352fe6045279735da954c79bccf93738948dc3e133"
+    },
+    {
+      "path": "echo_generation/configs/airborne_point_baseline.m",
+      "sha256": "6c3cf642fc0acf596b02cdbef9ec0fbc7e49febb651b887943bb65aff98aa579"
+    },
+    {
+      "path": "echo_generation/generate_echo.m",
+      "sha256": "80a824dd88853a0a7616935d27d4b9eb62e1835624649324657779cebaee2bab"
+    },
+    {
+      "path": "echo_generation/geometry/airborne_straight_geometry.m",
+      "sha256": "ecaaea84d6ad3eb81e837b3658dd2ca6505437e016287e49da5050a2df16f368"
+    },
+    {
+      "path": "echo_generation/targets/point_target_scene.m",
+      "sha256": "d916a49d5ec42744f70e4a1de76ec125193fbfbf8270c29713367f269edb8d95"
+    },
+    {
+      "path": "experiments/exp_001_airborne_rd/run_experiment.m",
+      "sha256": "bd663385c255dd36fa974c0c1f526dce288c13c5eb40296d9437a01cedb2096b"
+    },
+    {
+      "path": "signal_processing/rd/rd_baseline_config.m",
+      "sha256": "36b9d02590e9209d6e24252fe1a8e4f7b9eb644e859ba7afde4be3e74b022fb2"
+    },
+    {
+      "path": "signal_processing/rd/run_rd.m",
+      "sha256": "c26b77cb94aed864d3824fc79d3a3bc5eb20bcb653691bf41a4158d05be8a6ea"
+    }
+  ]
+}

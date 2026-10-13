@@ -1,0 +1,11 @@
+{
+  "range_fft_block_rows": 64,
+  "range_processing_half_width_m": 5000,
+  "range_output_half_width_m": 200,
+  "azimuth_output_half_width_m": 100,
+  "rcmc_sinc_taps": 16,
+  "azimuth_fft_padding_factor": 2,
+  "metrics_oversampling": 32,
+  "db_floor": -60,
+  "window": "rectangular"
+}

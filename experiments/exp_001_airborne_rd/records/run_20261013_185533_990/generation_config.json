@@ -1,0 +1,41 @@
+{
+  "c_mps": 2.99792458E+8,
+  "radar": {
+    "carrier_hz": 9.4E+9,
+    "bandwidth_hz": 1.0E+8,
+    "pulse_duration_s": 1E-5,
+    "chirp_rate_hz_per_s": 1.0E+13,
+    "range_sample_rate_hz": 1.2E+8,
+    "prf_hz": 600,
+    "wavelength_m": 0.031892814680851062
+  },
+  "scene": {
+    "center_slant_range_m": 30000,
+    "slant_swath_m": 10000
+  },
+  "geometry": {
+    "height_m": 10000,
+    "speed_mps": 250,
+    "squint_deg": 0,
+    "illumination_time_s": 3.4,
+    "antenna_length_m": 1,
+    "aperture_weight": "rectangular_effective_illumination"
+  },
+  "targets": {
+    "along_track_m": 0,
+    "cross_track_m": 28284.2712474619,
+    "height_m": 0,
+    "reflectivity": 1
+  },
+  "reference_table": {
+    "wavelength_m": 0.032,
+    "azimuth_chirp_rate_magnitude_hz_per_s": 131,
+    "aperture_length_m": 850,
+    "doppler_bandwidth_hz": 443
+  },
+  "numerics": {
+    "fast_time_guard_s": 2E-6,
+    "echo_precision": "single",
+    "random_seed": 1
+  }
+}

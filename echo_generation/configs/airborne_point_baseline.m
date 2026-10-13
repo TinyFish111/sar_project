@@ -1,0 +1,30 @@
+function cfg = airborne_point_baseline()
+% 表4.1机载参数。SI单位；表中派生量作为参考，不重复决定相位。
+cfg.c_mps = 299792458;
+cfg.radar.carrier_hz = 9.4e9;
+cfg.radar.bandwidth_hz = 100e6;
+cfg.radar.pulse_duration_s = 10e-6;
+cfg.radar.chirp_rate_hz_per_s = 10e12; % 10 MHz/us
+cfg.radar.range_sample_rate_hz = 120e6;
+cfg.radar.prf_hz = 600;
+cfg.radar.wavelength_m = cfg.c_mps/cfg.radar.carrier_hz;
+cfg.scene.center_slant_range_m = 30000;
+cfg.scene.slant_swath_m = 10000;
+cfg.geometry.height_m = 10000;
+cfg.geometry.speed_mps = 250;
+cfg.geometry.squint_deg = 0; % 表中<8度；本实验明确选择正侧视
+cfg.geometry.illumination_time_s = 3.4;
+cfg.geometry.antenna_length_m = 1;
+cfg.geometry.aperture_weight = 'rectangular_effective_illumination';
+cfg.targets.along_track_m = 0;
+cfg.targets.cross_track_m = sqrt(cfg.scene.center_slant_range_m^2-cfg.geometry.height_m^2);
+cfg.targets.height_m = 0;
+cfg.targets.reflectivity = 1;
+cfg.reference_table.wavelength_m = 0.032;
+cfg.reference_table.azimuth_chirp_rate_magnitude_hz_per_s = 131;
+cfg.reference_table.aperture_length_m = 850;
+cfg.reference_table.doppler_bandwidth_hz = 443;
+cfg.numerics.fast_time_guard_s = 2e-6;
+cfg.numerics.echo_precision = 'single';
+cfg.numerics.random_seed = 1;
+end
