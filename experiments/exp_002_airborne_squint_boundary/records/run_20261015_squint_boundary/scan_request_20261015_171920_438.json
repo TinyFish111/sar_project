@@ -1,0 +1,42 @@
+{
+  "angles_deg": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9
+  ],
+  "closest_ranges_m": [
+    25000,
+    30000,
+    35000
+  ],
+  "along_track_m": [
+    -500,
+    0,
+    500
+  ],
+  "methods": [
+    "RD",
+    "CS",
+    "WK"
+  ],
+  "threshold": {
+    "irw_ratio_max": 1.15,
+    "pslr_degradation_db": 2,
+    "islr_degradation_db": 2,
+    "position_resolution_fraction": 0.5
+  },
+  "bp_range_upsampling": 4,
+  "cut_half_width_resolution_cells": 24,
+  "cut_samples": 801,
+  "figure_angles_deg": [
+    0,
+    8,
+    70
+  ],
+  "refinement_step_deg": 1
+}

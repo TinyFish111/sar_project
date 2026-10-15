@@ -1,0 +1,22 @@
+{
+  "key": "sq40_r35000",
+  "dataset_id": "echo_002_sq40_r35000_run_20261015_squint_boundary",
+  "dataset_path": "D:\\sar_project\\data\\simulated\\echo_002_sq40_r35000_run_20261015_squint_boundary\\echo.mat",
+  "angle_deg": 40,
+  "closest_range_m": 35000,
+  "prf_hz": 650,
+  "samples": [
+    4444,
+    2548
+  ],
+  "illumination_s": 6.7427432567269747,
+  "provenance": {
+    "git_commit_at_generation": "567ae966eb0857b33885c020f80f07d99f0e60ca",
+    "git_dirty_at_generation": true,
+    "configuration_path": "echo_generation/configs/airborne_squint_boundary.m",
+    "random_seed": 1,
+    "generated_at": "2026-10-15 16:27:30 +0800",
+    "matlab_version": "9.13.0.2049777 (R2022b)",
+    "matlab_release": "2022b"
+  }
+}

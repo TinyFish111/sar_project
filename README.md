@@ -11,7 +11,7 @@
 - docs/datasets：可提交的仿真回波说明。
 - scratch：临时尝试；tools：管理脚本。
 
-旧代码与文件已备份到项目外。当前已实现典型机载参数的点目标回波生成与正侧视RD成像。
+旧代码与文件已备份到项目外。当前已实现典型机载点目标回波、正侧视RD基线，以及固定地面场景的条带大斜视RD/CS/omega-k/BP实验。
 
 ## 运行第一个实验（MATLAB R2021b）
 
@@ -23,6 +23,11 @@ summary = run_experiment();
 每次运行使用新的回波编号和运行编号，不覆盖旧数据。完整回波覆盖10km斜距带，RD处理完整距离带，保存中心复数图像及全场景幅度缩略图。
 本地data目录保存回波；results保存图像和MAT结果；experiments保存可上传的参数、指标和研究记录。
 RD独立读取已有回波的方法见signal_processing/rd/README.md。
+
+## 机载大斜视边界实验
+
+实验002固定地面场景、最近斜距30km和条带波束，按1m有效天线计算照射区间，在0至70度比较RD+SRC、中心参考CS、omega-k及BP。
+方案、合格判据、逐点激励的适用范围及运行说明见[实验002记录](experiments/exp_002_airborne_squint_boundary/notes.md)，实测边界与局限见[本次结论](experiments/exp_002_airborne_squint_boundary/records/run_20261015_squint_boundary/conclusions.md)。
 
 ## 绘图规范
 成像配色以用户提供的五算法统一参数仿真图片为参考：parula色图、[-40,0]dB成像色标、蓝色剖面曲线。

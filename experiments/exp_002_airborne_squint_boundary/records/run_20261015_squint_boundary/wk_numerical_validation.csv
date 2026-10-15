@@ -1,0 +1,2 @@
+angle_deg,closest_range_m,stolt_taps,frequency_grid_refinement,irw_change_x_fraction,irw_change_y_fraction,pslr_change_x_db,pslr_change_y_db,islr_change_x_db,islr_change_y_db,converged
+70,35000,32,2,1.47993548722525e-05,3.12352020597206e-05,-0.00713007561174805,-0.000805684693492736,-0.010243955447649,-0.00192347400749426,1

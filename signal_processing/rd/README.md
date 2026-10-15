@@ -27,3 +27,17 @@ RCMC采用16点Lanczos截断sinc，权重归一化。不加窗。
 未实施二次距离压缩SRC、运动补偿、自聚焦、传播衰减和噪声。本例高载频/相对窄带且正侧视，应以实际IRW和旁瓣检查验证近似，不外推到大斜视。
 未调用MATLAB内置rangeDopplerImagerLFM：该函数从R2022a引入，用户环境为R2021b。
 参考：https://www.mathworks.com/help/phased/ref/rangedopplerimagerlfm.html
+
+## 实验002的斜视RD+SRC入口
+
+保留上面的正侧视基线，新增run_rd_squint。按实验002的meta+echo格式读取数据，公共I/O仅准备去多普勒中心后的方位频谱，RD不依赖CS、WK或BP。
+
+```matlab
+addpath('D:/sar_project/common/io','D:/sar_project/signal_processing/rd');
+cache = prepare_squint_spectrum('已有echo.mat路径','D:/sar_project/scratch/my_rd_spectrum.mat');
+result = run_rd_squint(cache);
+```
+
+距离压缩含固定30km参考的二阶SRC，RCMC按各输出距离的R/D轨迹重采样；8倍距离加密。
+中心方位参考使用精确历程的相位部分，并补标准距离相关差分相位。输出坐标及去载波状态见docs/data_contract.md 2.0。
+参考SRC误差和更高阶耦合保留用于测边界；不加入新的高阶空间变化算法。只支持本文直线条带模型。

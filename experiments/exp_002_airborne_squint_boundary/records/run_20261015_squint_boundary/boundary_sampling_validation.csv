@@ -1,0 +1,3 @@
+angle_deg,closest_range_m,method,range_sample_rate_hz,max_irw_ratio_change,max_side_loss_change_db,classification_unchanged,pass
+9,25000,RD,240000000,0.000446800062027686,0.0314581958280655,1,1
+9,25000,CS,240000000,2.91050137569693e-05,0.00425483780397684,1,1

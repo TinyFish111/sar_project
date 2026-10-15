@@ -1,0 +1,10 @@
+{
+  "raw_datasets_checked": 71,
+  "metric_records": 276,
+  "nine_position_records": 828,
+  "png_figures": 22,
+  "chinese_font": "Microsoft YaHei UI",
+  "actual_matlab_release": "2022b",
+  "checked_at": "2026-10-15 17:56:24 +0800",
+  "all_checks_passed": true
+}

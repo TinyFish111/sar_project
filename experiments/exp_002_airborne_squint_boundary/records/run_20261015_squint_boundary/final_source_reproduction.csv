@@ -1,0 +1,7 @@
+angle_deg,closest_range_m,method,max_irw_fraction_difference,max_side_difference_db,pass
+0,30000,RD,0,0,1
+0,30000,CS,0,0,1
+0,30000,WK,0,0,1
+8,25000,RD,0,0,1
+8,25000,CS,0,0,1
+8,25000,WK,0,0,1

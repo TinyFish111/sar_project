@@ -1,0 +1,7 @@
+{
+  "checked_at": "2026-10-15 17:57:47 +08:00",
+  "source_files": 52,
+  "mismatches": 0,
+  "algorithm": "SHA-256",
+  "verifier": "PowerShell Get-FileHash independent of MATLAB Java implementation"
+}

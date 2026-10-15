@@ -1,0 +1,17 @@
+method,criterion,last_sampled_pass_deg,first_fail_deg
+RD,IRW,15,20
+RD,PSLR,8,9
+RD,ISLR,8,9
+RD,position,15,20
+CS,IRW,15,20
+CS,PSLR,8,9
+CS,ISLR,8,9
+CS,position,15,20
+WK,IRW,70,NaN
+WK,PSLR,70,NaN
+WK,ISLR,70,NaN
+WK,position,70,NaN
+BP,IRW,70,NaN
+BP,PSLR,70,NaN
+BP,ISLR,70,NaN
+BP,position,70,NaN
