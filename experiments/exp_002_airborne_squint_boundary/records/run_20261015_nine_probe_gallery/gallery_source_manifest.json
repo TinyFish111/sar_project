@@ -1,0 +1,35 @@
+{
+  "note": "Final gallery source hashes; bind code commit in completion.md after committing.",
+  "sources": [
+    {
+      "path": "experiments/exp_002_airborne_squint_boundary/probe_gallery_config.m",
+      "sha256": "da67bc00b15d73edef5b5da21395c91c822c7ecc208467c48a30bde462b66d4e",
+      "bytes": 689
+    },
+    {
+      "path": "experiments/exp_002_airborne_squint_boundary/render_nine_probe_gallery.m",
+      "sha256": "b2f16dd242142c36b63108968457a3ca583bf0d1a50fbbeed272640a16ff65f4",
+      "bytes": 14036
+    },
+    {
+      "path": "common/plotting/plot_squint_probe_grid.m",
+      "sha256": "f0824ca74649e74a7fa14e131bee853fd81659f87c94d4489dd612871037867f",
+      "bytes": 2119
+    },
+    {
+      "path": "common/plotting/plot_squint_probe_mosaic.m",
+      "sha256": "65445045143bce3ec8b2dc810ed2abae8e71641bc51f65c3c46883d50dcdad60",
+      "bytes": 3059
+    },
+    {
+      "path": "common/plotting/sar_plot_style.m",
+      "sha256": "92a2c1e47be206514b93a148971f58997c5792d3c747b7d18b4061bbcd1dd180",
+      "bytes": 351
+    },
+    {
+      "path": "common/plotting/sar_chinese_font.m",
+      "sha256": "6802c37cf4f677da21ab52c938617f3aae12978d9349b4e49c373a9f975ecd4d",
+      "bytes": 592
+    }
+  ]
+}

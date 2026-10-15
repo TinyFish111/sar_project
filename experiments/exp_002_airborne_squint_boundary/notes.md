@@ -114,3 +114,42 @@ elapsed_s仅为本机工程日志：BP包含所请求像素的分块处理，频
 详细记录在records/run_20261015_squint_boundary/：conclusions.md、metrics.csv、angle_summary.csv、boundary_and_sensitivity.csv、criterion_failure_brackets.csv、各validation.csv及src_phase_diagnostic.csv。
 局部复图与PNG按results/exp_002_airborne_squint_boundary/run_20261015_squint_boundary/<方法>/保存；跨方法汇总图在该运行的figures/。原始回波逐份路径见docs/datasets中的本集合说明。
 最终可复现源文件校验见source_manifest.json，最终实现提交号与GitHub同步状态见completion.md。
+
+## 九点图集补充（2026-10-15）
+
+入口 `render_nine_probe_gallery`，参数集中于 `probe_gallery_config.m`，独立绘图运行编号为
+`run_20261015_nine_probe_gallery`。原边界运行、回波和已有图片保持只读。
+
+```matlab
+addpath('D:/sar_project/experiments/exp_002_airborne_squint_boundary');
+output = render_nine_probe_gallery();
+```
+
+图集选取0、8、9、70deg，分别显示正侧视、联合判据边界前后和最大测试角。
+每角度的25/30/35km三个最近斜距位置、四方法重新计算257×257二维复图，
+地面窗口统一为真值中心的16m×16m，采样间隔0.0625m，横纵轴严格等比例。
+不以各方法测得的峰值重新居中，也不按不同算法的主瓣宽度缩放窗口。
+
+- 各方法 `figures/sqXX_nine_points.png`：一张图包含九个位置的局部成像，三行从上到下为35/30/25km，三列从左到右为x=-500/0/500m。
+- 各方法 `figures/sqXX_nine_points_mosaic.png`：九响应放入一个坐标系，局部仍为16m×16m、等比例显示，块中心展示间距压缩为20m；真实方位/最近斜距写在各点标签，不能将展示坐标当真实场景坐标。独立归一化的幅度块不相交，不作复数相干相加。
+- 各方法 `figures/angle_evolution.png`：三距离×四角度同尺度比较。
+- 运行目录 `figures/sqXX_four_methods.png`：三距离×四算法同尺度比较。
+- 各方法 `sqXX_rXXXXX.mat`：`response.image`为地面y行×方位x列复数矩阵，两个offset坐标均为相对真值的米制地面坐标，含输入编号、算法参数和原评价结果。
+
+三个距离分别来自各自的实际单点回波；同距离另外两个方位位置按条带平移等价展示，
+依据原实验 `translated_processing_validation.csv` 的独立x=500m回波验证。
+因此九点同页图是**独立点响应的九位置图集**，不能称为九目标同时激励后的相干整幅成像。
+同距三点形状相同是该理想匀速条带模型的性质，不是额外独立验证。
+整幅物理场景约1km×10.6km，米级主瓣在普通整幅PNG中无法分辨；九格局部图保留真实米制比例，
+每格标题给出实际位置和地距，不能将格与格之间的排版间距当作真实场景距离。
+
+沿用公共parula(256)、[-40,0]dB和中文字体。各格独立峰值归一化，只比较形状与旁瓣，
+不用于比较绝对增益。红圈为真值。图题中的合格状态沿用原高密度剖面指标；
+不会因显示网格或16m裁剪窗口改变原边界判据。9deg首次失败是旁瓣条件，
+在幅度图上可能很轻微，应结合原PSLR/ISLR指标判断，不能只凭视觉重定边界。
+图集检查及版本绑定记录在 `records/run_20261015_nine_probe_gallery/`。
+
+本次实际导出40张PNG、48份二维复图；20个新旧公共真值像素的复数相对差异最大为3.68e-8。
+显示网格对最窄实测主瓣仍有至少7.86个采样间隔。70deg近/远距RD、CS的条状扩散
+延伸到16m窗口边缘，因此这些局部图不表示完整散焦范围；窗口边缘幅度另存于gallery_checks.csv。
+各方法已在相同窗口、相同米制比例下显示，不通过缩放散焦图使它看起来更尖锐。

@@ -1,0 +1,20 @@
+{
+  "source_run_id": "run_20261015_squint_boundary",
+  "run_id": "run_20261015_nine_probe_gallery",
+  "png_count": 40,
+  "complex_roi_count": 48,
+  "target_positions_per_nine_panel_figure": 9,
+  "previous_roi_common_center_checks": 20,
+  "previous_roi_center_max_relative_error": 3.6774591108295355E-8,
+  "display_normalization": "independent peak per panel; parula(256); [-40,0] dB",
+  "translation_basis": "independent stripmap x translation; existing actual +500 m validation",
+  "simultaneous_nine_target_echo": false,
+  "provenance": {
+    "generation_head": "a66fe5a8a80061e1f290e1fcd50dc960d3142b83",
+    "generation_dirty": true,
+    "matlab_version": "9.13.0.2049777 (R2022b)",
+    "source_algorithm_commit": "4c6e8e088fe1527b7e89ed2e8f638b4bf073b931",
+    "final_code_commit_note": "See completion.md; generation HEAD does not include uncommitted gallery source."
+  },
+  "final_code_commit": "See completion.md after source commit; generation HEAD is not final code version."
+}

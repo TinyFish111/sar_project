@@ -1,0 +1,29 @@
+{
+  "source_run_id": "run_20261015_squint_boundary",
+  "run_id": "run_20261015_nine_probe_gallery",
+  "angles_deg": [
+    0,
+    8,
+    9,
+    70
+  ],
+  "closest_ranges_m": [
+    25000,
+    30000,
+    35000
+  ],
+  "along_track_m": [
+    -500,
+    0,
+    500
+  ],
+  "methods": [
+    "RD",
+    "CS",
+    "WK",
+    "BP"
+  ],
+  "half_span_m": 8,
+  "samples_per_axis": 257,
+  "resolution_dpi": 180
+}

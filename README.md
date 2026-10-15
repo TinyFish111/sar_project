@@ -29,6 +29,8 @@ RD独立读取已有回波的方法见signal_processing/rd/README.md。
 实验002固定地面场景、最近斜距30km和条带波束，按1m有效天线计算照射区间，在0至70度比较RD+SRC、中心参考CS、omega-k及BP。
 方案、合格判据、逐点激励的适用范围及运行说明见[实验002记录](experiments/exp_002_airborne_squint_boundary/notes.md)，实测边界与局限见[本次结论](experiments/exp_002_airborne_squint_boundary/records/run_20261015_squint_boundary/conclusions.md)。
 
+九位置局部成像、四算法及角度变化的同尺度图集由实验002的 `render_nine_probe_gallery` 生成，保存在本地 `results/exp_002_airborne_squint_boundary/run_20261015_nine_probe_gallery/`；九位置采用三距离单点回波及经验证的方位平移关系，详见实验记录。
+
 ## 绘图规范
 成像配色以用户提供的五算法统一参数仿真图片为参考：parula色图、[-40,0]dB成像色标、蓝色剖面曲线。
 完整规范见docs/plotting_conventions.md，公共样式入口为common/plotting/sar_plot_style.m。
