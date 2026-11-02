@@ -1,0 +1,78 @@
+{
+  "raw_rd_stationary_derivatives_passed": true,
+  "frequency_time_max_error_normalized_by_peak_spectrum": 1.9516146010753193e-15,
+  "rd_max_relative_two_route_error": 4.960495751684398e-16,
+  "rd_max_relative_eta_grid_change": 6.322443250633181e-15,
+  "correlation_max_error_normalized_by_peak": 1.9911965240109682e-16,
+  "parameters": {
+    "closest_range_m": 30000.0,
+    "velocity_m_s": 250.0,
+    "carrier_hz": 1000000000.0,
+    "effective_squint_deg": 30,
+    "half_aperture_s": 0.04,
+    "gaussian_time_scale_s": 3e-07,
+    "chirp_rate_hz_per_s": 3000000000000.0,
+    "eta_samples": 2001,
+    "frequency_samples": 4097,
+    "frequency_limits_hz": [
+      -12000000.0,
+      12000000.0
+    ]
+  },
+  "rd_route_checks": [
+    {
+      "doppler_offset_hz": -20.0,
+      "fast_time_offset_s": -6e-07,
+      "relative_two_route_error": 2.868525791250843e-16,
+      "relative_eta_grid_change": 3.4422309495010113e-15
+    },
+    {
+      "doppler_offset_hz": -20.0,
+      "fast_time_offset_s": 0.0,
+      "relative_two_route_error": 8.973244039282948e-18,
+      "relative_eta_grid_change": 5.01018178993033e-15
+    },
+    {
+      "doppler_offset_hz": -20.0,
+      "fast_time_offset_s": 6e-07,
+      "relative_two_route_error": 4.960495751684398e-16,
+      "relative_eta_grid_change": 6.322443250633181e-15
+    },
+    {
+      "doppler_offset_hz": 0.0,
+      "fast_time_offset_s": -6e-07,
+      "relative_two_route_error": 4.0840395592932017e-16,
+      "relative_eta_grid_change": 5.447887979524576e-16
+    },
+    {
+      "doppler_offset_hz": 0.0,
+      "fast_time_offset_s": 0.0,
+      "relative_two_route_error": 4.3089856292319284e-16,
+      "relative_eta_grid_change": 5.798197226583693e-16
+    },
+    {
+      "doppler_offset_hz": 0.0,
+      "fast_time_offset_s": 6e-07,
+      "relative_two_route_error": 2.476291435888918e-16,
+      "relative_eta_grid_change": 5.79684962971296e-16
+    },
+    {
+      "doppler_offset_hz": 20.0,
+      "fast_time_offset_s": -6e-07,
+      "relative_two_route_error": 3.5075146007924533e-16,
+      "relative_eta_grid_change": 3.445586397284969e-15
+    },
+    {
+      "doppler_offset_hz": 20.0,
+      "fast_time_offset_s": 0.0,
+      "relative_two_route_error": 2.0147129096691821e-16,
+      "relative_eta_grid_change": 2.4959346735673322e-15
+    },
+    {
+      "doppler_offset_hz": 20.0,
+      "fast_time_offset_s": 6e-07,
+      "relative_two_route_error": 2.8685437455521904e-16,
+      "relative_eta_grid_change": 1.7448670411966172e-15
+    }
+  ]
+}

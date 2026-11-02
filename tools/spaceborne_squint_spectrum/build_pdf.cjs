@@ -44,7 +44,7 @@ async function main() {
     p:has(+ .math.display) { break-after: avoid; }
     strong { color: #153e5b; }
     table { border-collapse: collapse; width: 100%; font-size: 12.5px;
-            line-height: 1.65; margin: 14px 0; }
+            line-height: 1.65; margin: 14px 0; break-inside: avoid; }
     thead { display: table-header-group; }
     th { background: #eaf2f8; color: #153e5b; font-weight: 600; }
     th, td { border: 1px solid #c7d5e0; padding: 6px 8px; vertical-align: top; }

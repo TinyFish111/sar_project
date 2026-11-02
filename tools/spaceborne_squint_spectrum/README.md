@@ -21,10 +21,14 @@ npm install --prefix scratch/spaceborne_squint_spectrum/runtime --no-audit --no-
 # 核验代数和三个距离空变速度目标；结果在 scratch 中，不覆盖正式数据。
 & D:/anaconda/python.exe tools/spaceborne_squint_spectrum/verify_derivation.py
 
+# 独立检查两种混合域、距离逆变换与匹配滤波自相关。
+& D:/anaconda/python.exe tools/spaceborne_squint_spectrum/verify_mixed_domains.py
+
 # 正文或参数改变后，审核并更新正文中的结果与配套小型文本指标。
 # 以下复制会更新本推导专用插图和指标，不涉及 data/results。
 Copy-Item scratch/spaceborne_squint_spectrum/verification/变等效速度几何与误差.png docs/derivations/spaceborne_squint_variable_vr/变等效速度几何与误差.png
 Copy-Item scratch/spaceborne_squint_spectrum/verification/metrics.json docs/derivations/spaceborne_squint_variable_vr/verification_metrics.json
+Copy-Item scratch/spaceborne_squint_spectrum/verification/mixed_domain_checks.json docs/derivations/spaceborne_squint_variable_vr/mixed_domain_checks.json
 
 # 从唯一 Markdown 源生成同目录 PDF，并自动检查正文覆盖和元数据摘要。
 node tools/spaceborne_squint_spectrum/build_pdf.cjs
