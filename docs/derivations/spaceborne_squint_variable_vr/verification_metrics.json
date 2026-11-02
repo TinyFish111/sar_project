@@ -1,0 +1,89 @@
+{
+  "symbolic_identities_passed": true,
+  "fresnel_max_absolute_error_divided_by_pulse_width": 5.73558041949456e-16,
+  "parameters": {
+    "earth_radius_m": 6378137.0,
+    "orbit_height_m": 700000.0,
+    "mu_m3_s2": 398600441800000.0,
+    "earth_rate_rad_s": 7.292115e-05,
+    "orbit_rate_rad_s": 0.0010602064484506297,
+    "inclination_deg": 98.0,
+    "delta_deg": 8.0,
+    "gamma_deg": 25.334562265500008,
+    "carrier_hz": 5300000000.0,
+    "half_aperture_s": 4.0,
+    "ground_position_at_zero_m": [
+      6316065.409159154,
+      -487795.85163605644,
+      741622.9130217559
+    ]
+  },
+  "range_derivatives": [
+    1169915.5728337488,
+    -5361.424898172841,
+    19.408318398290216,
+    0.27334846607809044,
+    0.003993312828740509,
+    4.614662100256642e-05
+  ],
+  "vr_zero_m_s": 7172.933212809327,
+  "vr_prime_zero_m_s2": 0.17719164001554868,
+  "vr_second_zero_m_s3": -0.0007044830159157781,
+  "u_zero_m_s": 5361.424898172841,
+  "effective_squint_deg": 48.370161207874844,
+  "range_series_vs_vector_max_m": 1.1641532182693481e-09,
+  "vr_rate_vs_vector_max_m_s": 1.8189894035458565e-12,
+  "constant_vr_max_range_error_m": 0.07025781110860407,
+  "constant_vr_max_phase_error_rad": 15.608445268510078,
+  "pi_over_four_range_threshold_m": 0.003535288419811321,
+  "integral_checks": [
+    {
+      "stationary_time_s": -3.0,
+      "azimuth_frequency_hz": 191584.00091180706,
+      "integral_abs_s": 0.0014283774085044974,
+      "relative_quadrature_change": 8.51925841572487e-11,
+      "previous_relative_quadrature_change": 6.961433354701029e-11,
+      "spa_relative_complex_error": 0.0009223750011139265,
+      "spa_phase_error_rad": 0.0009223751257050694,
+      "inverse_errors_s": [
+        0.062460569008043976,
+        0.0016937997677781702,
+        4.8973891698445016e-05,
+        1.487570913116798e-06
+      ],
+      "root_error_s": 1.0302869668521453e-13
+    },
+    {
+      "stationary_time_s": 0.0,
+      "azimuth_frequency_hz": 189568.157583978,
+      "integral_abs_s": 0.03817363035223954,
+      "relative_quadrature_change": 2.166084053411529e-11,
+      "previous_relative_quadrature_change": 2.4872454280244864e-11,
+      "spa_relative_complex_error": 5.797758042463362e-05,
+      "spa_phase_error_rad": -5.797758033364026e-05,
+      "inverse_errors_s": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "root_error_s": -1.4615015871885506e-13
+    },
+    {
+      "stationary_time_s": 3.0,
+      "azimuth_frequency_hz": 187465.31825787754,
+      "integral_abs_s": 0.0013692868511473765,
+      "relative_quadrature_change": 3.359450538099849e-10,
+      "previous_relative_quadrature_change": 8.222964000809953e-10,
+      "spa_relative_complex_error": 0.0008583719123587571,
+      "spa_phase_error_rad": 0.0008583720134101094,
+      "inverse_errors_s": [
+        0.06431226682335289,
+        -0.0018125948647540469,
+        5.450640387261174e-05,
+        -1.7232980407122511e-06
+      ],
+      "root_error_s": 6.483702463810914e-14
+    }
+  ]
+}
