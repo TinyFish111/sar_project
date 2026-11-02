@@ -1,6 +1,8 @@
-# 变等效速度频谱推导的核验与导出
+# 距离空变等效速度频谱推导的核验与导出
 
 这些是研究文档的配套工具，不是新的 MATLAB 回波生成或成像处理模块。输入和输出路径均相对脚本所在的项目根目录计算。
+
+当前数学约定：距离时间为 τ；固定目标的 V_r(r) 在孔径内时间不变，跨目标距离变化。正文、算例、插图和指标均按该约定维护。文件名与目录名保持既有路径。
 
 ## 依赖
 
@@ -16,7 +18,7 @@
 # 所有本地安装内容留在忽略的 scratch 目录中。
 npm install --prefix scratch/spaceborne_squint_spectrum/runtime --no-audit --no-fund playwright-core katex
 
-# 核验代数和理想圆轨道示例；结果在 scratch 中，不覆盖正式数据。
+# 核验代数和三个距离空变速度目标；结果在 scratch 中，不覆盖正式数据。
 & D:/anaconda/python.exe tools/spaceborne_squint_spectrum/verify_derivation.py
 
 # 正文或参数改变后，审核并更新正文中的结果与配套小型文本指标。

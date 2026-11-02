@@ -14,6 +14,8 @@ manifest = json.loads((SCRATCH / "render_manifest.json").read_text(encoding="utf
 source = Path(manifest["source"])
 pdf_path = Path(manifest["output"])
 markdown = source.read_text(encoding="utf-8")
+assert "tao" not in markdown, "距离向时间必须统一使用 τ"
+assert r"\tau" in markdown and "V_r(r)" in markdown, "当前推导缺少约定符号"
 source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
 assert source_hash == manifest["sha256"]
 
@@ -50,8 +52,8 @@ assert not outside_body, f"字形越出正文边界：{outside_body[:20]}"
 writer = PdfWriter()
 writer.clone_document_from_reader(reader)
 writer.add_metadata({
-    "/Title": "星载斜视 SAR：变等效速度条件下的回波频谱推导",
-    "/Subject": "与 Markdown 正文同源的数学推导、误差边界和理想几何核验",
+    "/Title": "星载斜视 SAR：孔径内时不变、距离空变等效速度的回波频谱推导",
+    "/Subject": "距离时间为 τ，固定目标速度在孔径内不变，不同距离目标采用不同速度",
     "/Author": "SAR 论文项目",
     "/SourceMarkdownSHA256": source_hash,
     "/NumberedEquations": str(len(tags)),

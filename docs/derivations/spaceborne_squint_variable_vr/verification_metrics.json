@@ -1,89 +1,163 @@
 {
+  "model": "V_r(r) is constant in eta for each target and varies across target ranges",
   "symbolic_identities_passed": true,
   "fresnel_max_absolute_error_divided_by_pulse_width": 5.73558041949456e-16,
   "parameters": {
-    "earth_radius_m": 6378137.0,
-    "orbit_height_m": 700000.0,
-    "mu_m3_s2": 398600441800000.0,
-    "earth_rate_rad_s": 7.292115e-05,
-    "orbit_rate_rad_s": 0.0010602064484506297,
-    "inclination_deg": 98.0,
-    "delta_deg": 8.0,
-    "gamma_deg": 25.334562265500008,
     "carrier_hz": 5300000000.0,
+    "bandwidth_hz": 100000000.0,
     "half_aperture_s": 4.0,
-    "ground_position_at_zero_m": [
-      6316065.409159154,
-      -487795.85163605644,
-      741622.9130217559
+    "reference_closest_range_m": 800000.0,
+    "reference_speed_m_s": 7100.0,
+    "velocity_range_slope_per_s": 0.001,
+    "effective_squint_deg": 45.0,
+    "quadrature_grid_counts": [
+      100001,
+      200001,
+      400001
     ]
   },
-  "range_derivatives": [
-    1169915.5728337488,
-    -5361.424898172841,
-    19.408318398290216,
-    0.27334846607809044,
-    0.003993312828740509,
-    4.614662100256642e-05
+  "stationary_time_max_error_s": 5.684341886080802e-14,
+  "stationary_phase_max_algebra_error_rad": 5.960464477539063e-08,
+  "pi_over_four_range_threshold_m": 0.0035022483411214955,
+  "targets": [
+    {
+      "closest_range_m": 700000.0,
+      "velocity_m_s": 7000.0,
+      "reference_range_m": 989949.4936611665,
+      "closing_speed_m_s": 4949.747468305833,
+      "closest_time_s": 99.99999999999999,
+      "curvature_at_zero_m_s2": 24.748737341529175,
+      "global_velocity_max_range_error_m": 11.624571772175841,
+      "global_velocity_max_phase_error_rad": 2582.509893389686
+    },
+    {
+      "closest_range_m": 800000.0,
+      "velocity_m_s": 7100.0,
+      "reference_range_m": 1131370.849898476,
+      "closing_speed_m_s": 5020.4581464244875,
+      "closest_time_s": 112.67605633802815,
+      "curvature_at_zero_m_s2": 22.27828302475867,
+      "global_velocity_max_range_error_m": 2.3283064365386963e-10,
+      "global_velocity_max_phase_error_rad": 5.172555621873547e-08
+    },
+    {
+      "closest_range_m": 900000.0,
+      "velocity_m_s": 7200.0,
+      "reference_range_m": 1272792.2061357854,
+      "closing_speed_m_s": 5091.168824543142,
+      "closest_time_s": 124.99999999999999,
+      "curvature_at_zero_m_s2": 20.364675298172575,
+      "global_velocity_max_range_error_m": 9.13308705855161,
+      "global_velocity_max_phase_error_rad": 2029.0027149519722
+    }
   ],
-  "vr_zero_m_s": 7172.933212809327,
-  "vr_prime_zero_m_s2": 0.17719164001554868,
-  "vr_second_zero_m_s3": -0.0007044830159157781,
-  "u_zero_m_s": 5361.424898172841,
-  "effective_squint_deg": 48.370161207874844,
-  "range_series_vs_vector_max_m": 1.1641532182693481e-09,
-  "vr_rate_vs_vector_max_m_s": 1.8189894035458565e-12,
-  "constant_vr_max_range_error_m": 0.07025781110860407,
-  "constant_vr_max_phase_error_rad": 15.608445268510078,
-  "pi_over_four_range_threshold_m": 0.003535288419811321,
   "integral_checks": [
     {
-      "stationary_time_s": -3.0,
-      "azimuth_frequency_hz": 191584.00091180706,
-      "integral_abs_s": 0.0014283774085044974,
-      "relative_quadrature_change": 8.51925841572487e-11,
-      "previous_relative_quadrature_change": 6.961433354701029e-11,
-      "spa_relative_complex_error": 0.0009223750011139265,
-      "spa_phase_error_rad": 0.0009223751257050694,
-      "inverse_errors_s": [
-        0.062460569008043976,
-        0.0016937997677781702,
-        4.8973891698445016e-05,
-        1.487570913116798e-06
-      ],
-      "root_error_s": 1.0302869668521453e-13
-    },
-    {
+      "closest_range_m": 700000.0,
+      "range_frequency_hz": -50000000.0,
+      "azimuth_frequency_hz": 173361.09375110178,
       "stationary_time_s": 0.0,
-      "azimuth_frequency_hz": 189568.157583978,
-      "integral_abs_s": 0.03817363035223954,
-      "relative_quadrature_change": 2.166084053411529e-11,
-      "previous_relative_quadrature_change": 2.4872454280244864e-11,
-      "spa_relative_complex_error": 5.797758042463362e-05,
-      "spa_phase_error_rad": -5.797758033364026e-05,
-      "inverse_errors_s": [
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "root_error_s": -1.4615015871885506e-13
+      "integral_abs_s": 0.0339655911868713,
+      "relative_quadrature_change": 3.4401024311484555e-11,
+      "previous_relative_quadrature_change": 1.2028590878745263e-11,
+      "spa_relative_complex_error": 4.58992905238874e-05
     },
     {
-      "stationary_time_s": 3.0,
-      "azimuth_frequency_hz": 187465.31825787754,
-      "integral_abs_s": 0.0013692868511473765,
-      "relative_quadrature_change": 3.359450538099849e-10,
-      "previous_relative_quadrature_change": 8.222964000809953e-10,
-      "spa_relative_complex_error": 0.0008583719123587571,
-      "spa_phase_error_rad": 0.0008583720134101094,
-      "inverse_errors_s": [
-        0.06431226682335289,
-        -0.0018125948647540469,
-        5.450640387261174e-05,
-        -1.7232980407122511e-06
-      ],
-      "root_error_s": 6.483702463810914e-14
+      "closest_range_m": 700000.0,
+      "range_frequency_hz": 0.0,
+      "azimuth_frequency_hz": 175012.15178682658,
+      "stationary_time_s": -5.684341886080802e-14,
+      "integral_abs_s": 0.03380499647692827,
+      "relative_quadrature_change": 4.902218308221168e-11,
+      "previous_relative_quadrature_change": 2.3857599098864493e-11,
+      "spa_relative_complex_error": 4.54662947620938e-05
+    },
+    {
+      "closest_range_m": 700000.0,
+      "range_frequency_hz": 50000000.0,
+      "azimuth_frequency_hz": 176663.20982255132,
+      "stationary_time_s": 0.0,
+      "integral_abs_s": 0.03364665838728678,
+      "relative_quadrature_change": 2.495675336241876e-11,
+      "previous_relative_quadrature_change": 2.905945376449128e-11,
+      "spa_relative_complex_error": 4.5041371345499047e-05
+    },
+    {
+      "closest_range_m": 800000.0,
+      "range_frequency_hz": -50000000.0,
+      "azimuth_frequency_hz": 175837.68080468895,
+      "stationary_time_s": -1.4210854715202004e-14,
+      "integral_abs_s": 0.03579932538640147,
+      "relative_quadrature_change": 3.409878688978185e-11,
+      "previous_relative_quadrature_change": 3.1982501988832906e-11,
+      "spa_relative_complex_error": 5.098988998677417e-05
+    },
+    {
+      "closest_range_m": 800000.0,
+      "range_frequency_hz": 0.0,
+      "azimuth_frequency_hz": 177512.32538378122,
+      "stationary_time_s": -1.4210854715202004e-14,
+      "integral_abs_s": 0.03563006048910256,
+      "relative_quadrature_change": 3.5472787128534646e-11,
+      "previous_relative_quadrature_change": 8.375483482522766e-11,
+      "spa_relative_complex_error": 5.0508845772471154e-05
+    },
+    {
+      "closest_range_m": 800000.0,
+      "range_frequency_hz": 50000000.0,
+      "azimuth_frequency_hz": 179186.9699628735,
+      "stationary_time_s": -5.684341886080802e-14,
+      "integral_abs_s": 0.03546317404370622,
+      "relative_quadrature_change": 7.207328921540698e-11,
+      "previous_relative_quadrature_change": 8.21480193149265e-11,
+      "spa_relative_complex_error": 5.0036805665542845e-05
+    },
+    {
+      "closest_range_m": 900000.0,
+      "range_frequency_hz": -50000000.0,
+      "azimuth_frequency_hz": 178314.26785827611,
+      "stationary_time_s": 0.0,
+      "integral_abs_s": 0.037443544732654155,
+      "relative_quadrature_change": 2.160205150498684e-11,
+      "previous_relative_quadrature_change": 5.2082958834324724e-11,
+      "spa_relative_complex_error": 5.578188440468514e-05
+    },
+    {
+      "closest_range_m": 900000.0,
+      "range_frequency_hz": 0.0,
+      "azimuth_frequency_hz": 180012.4989807359,
+      "stationary_time_s": 0.0,
+      "integral_abs_s": 0.037266505705659474,
+      "relative_quadrature_change": 1.398421929288008e-11,
+      "previous_relative_quadrature_change": 5.921661218567854e-11,
+      "spa_relative_complex_error": 5.5255653182924e-05
+    },
+    {
+      "closest_range_m": 900000.0,
+      "range_frequency_hz": 50000000.0,
+      "azimuth_frequency_hz": 181710.73010319567,
+      "stationary_time_s": -4.263256414560601e-14,
+      "integral_abs_s": 0.03709195436995406,
+      "relative_quadrature_change": 3.740531136502854e-11,
+      "previous_relative_quadrature_change": 1.2450539689908973e-11,
+      "spa_relative_complex_error": 5.473922914617656e-05
+    }
+  ],
+  "range_frequency_taylor_checks": [
+    {
+      "closest_range_m": 700000.0,
+      "second_order_phase_error_rad": -180.82342073834192,
+      "third_order_phase_error_rad": 3.83132456937669
+    },
+    {
+      "closest_range_m": 800000.0,
+      "second_order_phase_error_rad": -206.65533798667647,
+      "third_order_phase_error_rad": 4.378656650716217
+    },
+    {
+      "closest_range_m": 900000.0,
+      "second_order_phase_error_rad": -232.48725523501105,
+      "third_order_phase_error_rad": 4.925988732055745
     }
   ]
 }

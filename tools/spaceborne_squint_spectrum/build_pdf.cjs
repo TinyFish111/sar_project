@@ -129,7 +129,7 @@ async function main() {
     await page.pdf({ path: output, format: 'A4', printBackground: true,
       preferCSSPageSize: true, displayHeaderFooter: true,
       headerTemplate: `<div style="font-size:8px;color:#6d7e8b;width:100%;text-align:center;
-        font-family:'Microsoft YaHei',sans-serif;">星载斜视 SAR · 变等效速度频谱推导</div>`,
+        font-family:'Microsoft YaHei',sans-serif;">星载斜视 SAR · 距离空变等效速度频谱推导</div>`,
       footerTemplate: `<div style="font-size:8px;color:#6d7e8b;width:100%;text-align:center;
         font-family:'Microsoft YaHei',sans-serif;"><span class="pageNumber"></span> /
         <span class="totalPages"></span></div>` });
