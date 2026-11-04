@@ -4,6 +4,8 @@
 
 当前数学约定：距离时间为 τ；固定目标的 V_r(r) 在孔径内时间不变，跨目标距离变化。正文、算例、插图和指标均按该约定维护。文件名与目录名保持既有路径。
 
+图解版以波束中心为单目标时间原点，最近距离时刻统一写作 ηmin，波束中心斜距写作 Rb。主线讲几何、回波、混合域与近似，进阶证明放在附录。96 个编号公式中包含原有 93 个公式；其余为入门复数关系和补充的时间原点关系。
+
 ## 依赖
 
 - 核验：Python 3、NumPy、SciPy、SymPy、Matplotlib，中文字体 Microsoft YaHei。
@@ -24,6 +26,12 @@ npm install --prefix scratch/spaceborne_squint_spectrum/runtime --no-audit --no-
 # 独立检查两种混合域、距离逆变换与匹配滤波自相关。
 & D:/anaconda/python.exe tools/spaceborne_squint_spectrum/verify_mixed_domains.py
 
+# 生成正文引用的 12 张新教学图；与既有算例图合计 13 张。
+& D:/anaconda/python.exe tools/spaceborne_squint_spectrum/illustrate_derivation.py
+
+# 核对本轮章节重排保留旧公式，检查新旧编号与时间原点配方。
+& D:/anaconda/python.exe tools/spaceborne_squint_spectrum/check_teaching_revision.py
+
 # 正文或参数改变后，审核并更新正文中的结果与配套小型文本指标。
 # 以下复制会更新本推导专用插图和指标，不涉及 data/results。
 Copy-Item scratch/spaceborne_squint_spectrum/verification/变等效速度几何与误差.png docs/derivations/spaceborne_squint_variable_vr/变等效速度几何与误差.png
@@ -40,3 +48,5 @@ pdftoppm -scale-to 1400 -png docs/derivations/spaceborne_squint_variable_vr/星�
 若 Node 包安装在其他目录，设置 `SAR_PDF_MODULE_ROOT` 为对应 `node_modules` 绝对路径。构建脚本按本机默认 Edge 路径启动无界面排版，不打开可见窗口。
 
 每次改动正文后应重新导出并逐页检查。不要手工修改 PDF 正文，也不要将网格加密结果的一致性表述为未经证明的全频带严格误差界。该工具仅维护本推导专用产物；如需保留新的参数算例版本，应另建有明确编号的研究记录。
+
+`check_teaching_revision.py` 对比 Git 基准 `c1dd818` 与正文目录的 `formula_migration.json`，允许公式改编号、加框和统一 ηmin/Rb 记号，但不允许旧表达式悄然改变。如果后续研究确实改变数学模型，应重新审核这份迁移检查。PDF 检查还覆盖标题解析、Markdown 表格列数、跨页正文短句、全部公式编号和页面边界；它们不能替代逐页视觉检查。

@@ -16,6 +16,16 @@ pdf_path = Path(manifest["output"])
 markdown = source.read_text(encoding="utf-8")
 assert "tao" not in markdown, "距离向时间必须统一使用 τ"
 assert r"\tau" in markdown and "V_r(r)" in markdown, "当前推导缺少约定符号"
+table_pipe_count = None
+for line in markdown.splitlines():
+    if line.startswith("|"):
+        count = len(re.findall(r"(?<!\\)\|", line))
+        if table_pipe_count is None:
+            table_pipe_count = count
+        else:
+            assert count == table_pipe_count, "表格列数不一致；数学绝对值请用 lvert/rvert"
+    else:
+        table_pipe_count = None
 source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
 assert source_hash == manifest["sha256"]
 
@@ -27,7 +37,21 @@ def normalize(text):
 reader = PdfReader(pdf_path)
 pdf_text = "\n".join(page.extract_text() for page in reader.pages)
 flat_text = normalize(pdf_text)
-missing_prose = [text for text in manifest["prose"] if normalize(text) not in flat_text]
+expected_headings = re.findall(r"(?m)^#{1,3}\s+(.+)$", markdown)
+rendered_headings = {normalize(text) for text in manifest["headingTexts"]}
+assert all(normalize(text) in rendered_headings for text in expected_headings), "部分章节标题未解析为标题"
+missing_prose = []
+page_split_segments = 0
+for text in manifest["prose"]:
+    if normalize(text) in flat_text:
+        continue
+    # 长段落跨页时，PDF 文本流会在中间插入该页的数学字形与页眉页脚。
+    # 此时逐短句保留次序内的精确文字匹配，避免把正常分页判成正文缺失。
+    clauses = [part for part in re.split(r"(?<=[，。；！？])", text) if normalize(part)]
+    if len(clauses) > 1 and all(normalize(part) in flat_text for part in clauses):
+        page_split_segments += 1
+    else:
+        missing_prose.append(text)
 tags = re.findall(r"\\tag\{([^}]+)\}", markdown)
 assert len(tags) == len(set(tags)), "公式编号重复"
 missing_tags = [tag for tag in tags if f"({tag})" not in flat_text]
@@ -52,8 +76,8 @@ assert not outside_body, f"字形越出正文边界：{outside_body[:20]}"
 writer = PdfWriter()
 writer.clone_document_from_reader(reader)
 writer.add_metadata({
-    "/Title": "星载斜视 SAR：孔径内时不变、距离空变等效速度的回波频谱推导",
-    "/Subject": "距离时间为 τ，固定目标速度在孔径内不变，不同距离目标采用不同速度",
+    "/Title": "星载斜视 SAR 回波频谱推导：图解入门与严谨推导",
+    "/Subject": "教学图解、术语解释与核心公式；波束中心为零时刻，最近斜距时刻为 ηmin",
     "/Author": "SAR 论文项目",
     "/SourceMarkdownSHA256": source_hash,
     "/NumberedEquations": str(len(tags)),
@@ -71,7 +95,10 @@ summary = {
     "page_count": len(reopened.pages),
     "numbered_equations": len(tags),
     "math_expressions": manifest["mathCount"],
+    "headings_checked": len(expected_headings),
+    "images_rendered": manifest["imageCount"],
     "prose_segments_checked": len(manifest["prose"]),
+    "page_split_segments_checked_by_clause": page_split_segments,
     "missing_prose_segments": missing_prose,
     "missing_equation_numbers": missing_tags,
     "outside_page": outside_page,

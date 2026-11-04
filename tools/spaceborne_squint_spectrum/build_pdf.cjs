@@ -25,7 +25,7 @@ async function main() {
   fs.mkdirSync(scratch, { recursive: true });
   const markdown = fs.readFileSync(source, 'utf8');
   const sha256 = crypto.createHash('sha256').update(markdown).digest('hex');
-  const fragment = run('pandoc', [source, '--from=markdown+tex_math_dollars', '--to=html5',
+  const fragment = run('pandoc', [source, '--from=markdown+tex_math_dollars-implicit_figures', '--to=html5',
     '--katex', '--wrap=none']);
   const css = `
     @page { size: A4; margin: 18mm 16mm 17mm; }
@@ -61,6 +61,11 @@ async function main() {
     .math.inline .katex { font-size: 1.05em; }
     .math.display + p { margin-top: 8px; }
     .math-number { white-space: nowrap; }
+    .teaching-figure { break-inside: avoid; margin: 14px 0 20px; }
+    .teaching-figure > p { margin: 6px 0; }
+    .teaching-figure > p:last-child { color: #4d6272; font-size: 12px; line-height: 1.7; }
+    .learning-note { padding: 8px 11px; background: #edf5fa; border-left: 3px solid #0072bd; }
+    .katex .fbox { border-color: #0072bd; }
   `;
   const htmlPath = path.join(scratch, 'document.html');
   const base = pathToFileURL(sourceDir + path.sep).href;
@@ -81,11 +86,27 @@ async function main() {
     await page.addScriptTag({ path: path.join(katexRoot, 'katex.min.js') });
     const renderInfo = await page.evaluate(() => {
       for (const heading of document.querySelectorAll('h2')) {
-        if (/^(2\.|9\.|13\.|17\.)/.test(heading.textContent)) {
+        if (/^(?:2|3|5|7|9|13)\.|^附录 [ABDEFG]/.test(heading.textContent)) {
           heading.classList.add('chapter-start');
         }
       }
       const mathNodes = [...document.querySelectorAll('.math')];
+      for (const paragraph of document.querySelectorAll('p')) {
+        if (/^(本节输入|本节问题|本节目标|本节交接|读符号的小规则)/.test(paragraph.textContent.trim())) {
+          paragraph.classList.add('learning-note');
+        }
+      }
+      for (const picture of [...document.querySelectorAll('p:has(> img)')]) {
+        const caption = picture.nextElementSibling;
+        const equation = picture.previousElementSibling;
+        const wrapper = document.createElement('div');
+        wrapper.className = 'teaching-figure';
+        const includeEquation = equation?.tagName === 'P' && equation.querySelector('.math.display');
+        picture.parentNode.insertBefore(wrapper, includeEquation ? equation : picture);
+        if (includeEquation) wrapper.appendChild(equation);
+        wrapper.appendChild(picture);
+        if (caption?.tagName === 'P' && /^图\s*\d+/.test(caption.textContent.trim())) wrapper.appendChild(caption);
+      }
       const formulaTexts = [];
       for (const node of mathNodes) {
         const tex = node.textContent;
@@ -102,7 +123,9 @@ async function main() {
           prose.push(node.textContent.trim());
         }
       }
-      return { mathCount: mathNodes.length, displayCount: formulaTexts.length, formulaTexts, prose };
+      return { mathCount: mathNodes.length, displayCount: formulaTexts.length, formulaTexts, prose,
+        headingTexts: [...document.querySelectorAll('h1,h2,h3')].map(node => node.textContent.trim()),
+        imageCount: document.querySelectorAll('img').length };
     });
     await page.evaluate(() => document.fonts.ready);
     await page.emulateMedia({ media: 'print' });
