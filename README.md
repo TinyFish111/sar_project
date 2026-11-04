@@ -31,6 +31,10 @@ RD独立读取已有回波的方法见signal_processing/rd/README.md。
 
 九位置局部成像、四算法及角度变化的同尺度图集由实验002的 `render_nine_probe_gallery` 生成，保存在本地 `results/exp_002_airborne_squint_boundary/run_20261015_nine_probe_gallery/`；九位置采用三距离单点回波及经验证的方位平移关系，详见实验记录。
 
+## 星载CS图解教学实验
+
+实验003从既有斜视SAR频谱推导设计三相位CS，独立生成2048×4096的中心单点、九点原始回波，采用距离空变等效速度标定完成RCMC与成像。MATLAB入口为`experiments/exp_003_spaceborne_cs_teaching/run_generation.m`和`run_imaging.m`，便捷入口`run_all.m`。参数、核验与边界见[实验记录](experiments/exp_003_spaceborne_cs_teaching/notes.md)，详细推导与图解见[CS教材](docs/derivations/spaceborne_cs_teaching/星载斜视SAR的CS算法图解与MATLAB实验.md)。
+
 ## 绘图规范
 成像配色以用户提供的五算法统一参数仿真图片为参考：parula色图、[-40,0]dB成像色标、蓝色剖面曲线。
 完整规范见docs/plotting_conventions.md，公共样式入口为common/plotting/sar_plot_style.m。

@@ -1,0 +1,16 @@
+{
+  "source_sha256": "2860bff1be4d477462a712c74a2f193e9bd84c77bce59b3b8c54ead2777b7e6a",
+  "page_count": 26,
+  "numbered_equations": 36,
+  "math_expressions": 266,
+  "headings_checked": 50,
+  "images_rendered": 14,
+  "prose_segments_checked": 641,
+  "page_split_segments_checked_by_clause": 0,
+  "missing_prose_segments": [],
+  "missing_equation_numbers": [],
+  "outside_page": [],
+  "outside_body": [],
+  "replacement_characters": 0,
+  "pdf_bytes": 2195057
+}

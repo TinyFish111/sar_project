@@ -1,0 +1,35 @@
+{
+  "symbolic_square_identity": true,
+  "symbolic_rcm_center_identity": true,
+  "symbolic_mismatched_velocity_center": true,
+  "symbolic_chirp_transform_sign": true,
+  "symbolic_spectrum_second_derivative": true,
+  "matlab_code_files": 11,
+  "commented_executable_lines": 395,
+  "processor_uses_target_truth": false,
+  "rcmc_uses_interpolation": false,
+  "velocity_at_target_ranges_mps": [
+    7038.096121582392,
+    7037.997681619272,
+    7037.899066404612
+  ],
+  "full_output_band_max_tile_migration_error_m": 0.05256613317188297,
+  "full_output_band_max_inverse_km_phase_error_rad": 0.0016051674916876693,
+  "full_output_band_max_quadratic_spectrum_remainder_rad": 0.0024864835780533476,
+  "evaluated_band": "grid maxima across output ranges +/-2300 m, fb +/-850 Hz, fr +/-B/2; exclude finite-aperture and model errors; not rigorous continuous bounds",
+  "rcm_before_span_m": 295.68011947511695,
+  "rcm_after_span_m": 0.07679605111479759,
+  "rcm_after_max_error_m": 0.042972107767127454,
+  "nine_max_range_error_m": 0.04706914990674704,
+  "nine_max_azimuth_error_m": 0,
+  "nine_range_width_m": [
+    8.531079443870112,
+    8.53264645440504
+  ],
+  "nine_azimuth_width_m": [
+    5.081432134605052,
+    5.101683351207953
+  ],
+  "matlab_records": "experiments\\exp_003_spaceborne_cs_teaching\\records\\run_20261104_223510_663",
+  "all_matlab_targets_passed": true
+}

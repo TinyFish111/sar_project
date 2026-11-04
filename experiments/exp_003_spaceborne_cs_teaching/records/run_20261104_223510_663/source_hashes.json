@@ -1,0 +1,16 @@
+{
+  "purpose": "Hashes of final MATLAB source used by the formal imaging run; final implementation commit is recorded separately after commit. Generation and processing pre-run commit/dirty states remain in reproduction JSON.",
+  "files": {
+    "echo_generation/configs/spaceborne_cs_teaching.m": "bef22705ba52de672d99bcee939087438acce98cae4847353ca3395aad47016f",
+    "echo_generation/geometry/spaceborne_equivalent_geometry.m": "e7426d32e96b9d5bc21feb7c612060ae65aefd321c8fbc2a1409626f03a406fd",
+    "echo_generation/targets/spaceborne_cs_targets.m": "04ddda52184cc89b3429b5e0ae52a137f855a224b286dc659bb95a54454717ec",
+    "echo_generation/generate_spaceborne_cs_echo.m": "98be3950fd58f0a5516f13198f1608fd090417584766ba724dc46d46a632393e",
+    "signal_processing/cs/spaceborne_cs_options.m": "160267e8d90765e6cc1e74d190b3840d782ff022ea8372d068aed76b19da72c3",
+    "signal_processing/cs/run_spaceborne_cs.m": "f8805b1d269cb2af736c886088880b52267b27f1adfd944cae6cc3427623d2c6",
+    "experiments/exp_003_spaceborne_cs_teaching/evaluate_cs_teaching.m": "2bf534fdb15511704a1b84ca02dc68574e722bdada3886094dc9639264c5e3a1",
+    "experiments/exp_003_spaceborne_cs_teaching/render_cs_teaching.m": "7a6e8e612ec731153088ae6ac5c3f4b4b28185af4117a89688d00b46f7868000",
+    "experiments/exp_003_spaceborne_cs_teaching/run_all.m": "a4ad44ab21fd90ae3056ca4638a0aa9e475baeb2fb2802a6af804e9681dcd842",
+    "experiments/exp_003_spaceborne_cs_teaching/run_generation.m": "2850e88960b01e23ae9f2877e7cdf4f7512fad2da48fc43e24b91218b772d772",
+    "experiments/exp_003_spaceborne_cs_teaching/run_imaging.m": "1fa60f360104d9dd6eb9e336ab5e901a34d22732cd043ec20677a0aac9800fec"
+  }
+}

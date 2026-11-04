@@ -1,0 +1,99 @@
+{
+  "input_path": "D:/sar_project/data/simulated/echo_003_spaceborne_cs_nine_20261104_223344_762/echo.mat",
+  "input_id": "echo_003_spaceborne_cs_nine_20261104_223344_762",
+  "generation_configuration": {
+    "c_mps": 2.99792458E+8,
+    "radar": {
+      "carrier_hz": 5.3E+9,
+      "bandwidth_hz": 1.550829E+7,
+      "range_sample_rate_hz": 1.8962468E+7,
+      "pulse_duration_s": 3.71E-5,
+      "chirp_rate_hz_per_s": 4.180132075471698E+11,
+      "prf_hz": 1700,
+      "wavelength_m": 0.056564614716981133
+    },
+    "geometry": {
+      "earth_radius_m": 6.371E+6,
+      "altitude_m": 785000,
+      "gravitational_parameter": 3.986004418E+14,
+      "squint_deg": 5,
+      "aperture_duration_s": 0.6
+    },
+    "scene": {
+      "reference_closest_range_m": 850000
+    },
+    "targets": {
+      "range_offset_m": [
+        -1500,
+        0,
+        1500
+      ],
+      "beam_center_time_s": [
+        -0.08,
+        0,
+        0.08
+      ]
+    },
+    "numerics": {
+      "azimuth_samples": 2048,
+      "range_samples": 4096,
+      "random_seed": 2.0261104E+7,
+      "precision": "single"
+    },
+    "sources": {
+      "isce": "https://github.com/isce-framework/isce2/blob/b7702cfbd571681a133ebc5c3b23a10c78d52706/components/isceobj/Sensor/ERS.py",
+      "esa": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Onboard_Data_Processing/Introduction_to_a_SAR_System",
+      "nasa": "https://www.earthdata.nasa.gov/s3fs-public/2024-06/sci-sar-userguide.pdf"
+    }
+  },
+  "generation_provenance": {
+    "git_commit_at_generation": "b0ab2e68e4f110ef371962c43b6eb83fa60149a2",
+    "git_dirty_at_generation": true,
+    "configuration_path": "echo_generation/configs/spaceborne_cs_teaching.m",
+    "random_seed": 2.0261104E+7,
+    "generated_at": "2026-11-04 22:33:46 +0800",
+    "matlab_version": "9.13.0.2049777 (R2022b)",
+    "matlab_release": "2022b"
+  },
+  "sampling_checks": {
+    "finite_echo": true,
+    "shape": [
+      2048,
+      4096
+    ],
+    "max_baseband_doppler_hz": 644.93639048577825,
+    "doppler_guard_hz": 205.06360951422175,
+    "velocity_span_mps": [
+      7037.33693619164,
+      7038.6506380874171
+    ]
+  },
+  "processing_parameters": {
+    "range_output_half_width_m": 2300,
+    "azimuth_output_half_width_m": 1000,
+    "range_tile_centers_offset_m": [
+      -1600,
+      0,
+      1600
+    ],
+    "azimuth_padding_factor": 2,
+    "block_rows": 64,
+    "disable_rcmc": false,
+    "reference_velocity_mps": 7037.997681619272,
+    "tile_reference_range_m": [
+      848400,
+      850000,
+      851600
+    ],
+    "frequency_convention": "fa=fb+known true fdc; FFT uses exp(-j2*pi*f*t)"
+  },
+  "processing_provenance": {
+    "git_commit_at_generation": "b0ab2e68e4f110ef371962c43b6eb83fa60149a2",
+    "git_dirty_at_generation": true,
+    "configuration_path": "signal_processing/cs/spaceborne_cs_options.m",
+    "random_seed": 0,
+    "generated_at": "2026-11-04 22:35:10 +0800",
+    "matlab_version": "9.13.0.2049777 (R2022b)",
+    "matlab_release": "2022b"
+  }
+}
